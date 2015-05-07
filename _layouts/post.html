@@ -5,6 +5,12 @@ layout: default
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+
+	<div class="meta">
+		<img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40">
+		<span class="author">{{ page.post_author }}</span>
+	</div>
+
   {{ content }}
 </article>
 

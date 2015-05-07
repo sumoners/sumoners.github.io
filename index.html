@@ -12,6 +12,11 @@ title: Home
       </a>
     </h1>
 
+    <div class="meta">
+      <img src="http://www.gravatar.com/avatar/{{ post.post_gravatar }}?s=40">
+      <span class="author">{{ post.post_author }}</span>
+    </div>
+
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
       {{ post.date | date_to_string }}
     </time>

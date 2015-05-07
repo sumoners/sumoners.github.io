@@ -1,16 +1,18 @@
 ---
 layout: post
 title: Configurando o SSL da Amazon ELB com um certificado da Comodo
+post_author: Lucas Prim
+post_gravatar: d7556befd6b2a40d5618be1c0340e54a
 ---
 
 Se você comprou um certificado da Comodo e recebeu uma penca de arquivos do
 tipo:
 
 `
- AddTrustExternalCARoot.crt
- COMODORSAAddTrustCA.crt
- www_example_com.crt
- COMODORSADomainValidationSecureServerCA.crt
+AddTrustExternalCARoot.crt
+COMODORSAAddTrustCA.crt
+www_example_com.crt
+COMODORSADomainValidationSecureServerCA.crt
 `
 
 e está tentando configurar seu load balancer na Amazon usando eles,
