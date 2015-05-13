@@ -71,7 +71,7 @@ factory :ecommerce_feedback_new_interaction do
   end
   action 'ecommerce:feedback:new'
 
-  after(:create) do |interaction, evaluator|
+  before(:create) do |interaction, evaluator|
     interaction.metadata = interaction.metadata
                            .deep_merge(evaluator.extra_metadata)
   end
