@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dica rápida: Usando union no activerecord
+title: Dica rápida, Usando union no activerecord
 post_author: João Paulo Lethier
 post_gravatar: 72ee02196394ca8c0b03f2ada05f5857
 ---
