@@ -9,11 +9,14 @@
 }
 
 .masthead-title {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
 
   a {
+    display: block;
+    font-size: 2em;
     color: #505050;
   }
 

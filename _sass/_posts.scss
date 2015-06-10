@@ -8,6 +8,10 @@
   margin-bottom: 4em;
 }
 
+.post {
+  border-bottom: 2px solid #ec2099;
+}
+
 // Blog post or page title
 .page-title,
 .post-title,
@@ -20,6 +24,30 @@
 }
 
 // Meta data line below post title
+.meta {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e9e9e9;
+  border-bottom: 3px solid rgba(0,0,0,.07);
+  background: #fff;
+  border-radius: 5px;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1rem 0 0;
+  }
+
+  .author {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.5rem;
+    font-size: 0.875em;
+  }
+}
+
+
+
 .post-date {
   display: block;
   margin-top: -.5rem;
