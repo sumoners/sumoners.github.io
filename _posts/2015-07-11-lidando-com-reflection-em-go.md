@@ -61,8 +61,8 @@ com os dados de um outro projeto B, tudo usando a mesma implementação do
 ## Achando o caminho
 
 Carregar o arquivo de configuração do disco foi moleza, parsear o JSON e
-colocá-lo dentro de um _struct_ foi "mel na chupeta" agora instanciar um
-_pointer_ para o `struct` que cuidava da conexão com o GitHub foi um inferno.
+colocá-lo dentro de um _struct_ foi "mel na chupeta". Agora, instanciar um
+_pointer_ para o `struct` que cuidava da conexão com o GitHub... Foi um inferno!
 
 Depois de dar uma olhada rápida no stack overflow, me deparei com um artigo que
 apontava para a biblioteca _reflect_ da _standard library_ do Go. Olhando com
@@ -71,7 +71,7 @@ do `Type` conseguimos ter acesso ao tipo que estamos querendo lidar.
 
 Pensei: Se eu tenho o tipo do _struct_ que eu quero lidar, instanciar esse mesmo
 struct deve ser moleza. De fato não tem nada de complicado depois que você acha
-o caminho das pedras, mas achar o caminho que foi o complicado.
+o caminho das pedras, mas as pedras são inclinadas e cheia de perigos!
 
 ## A segunda barreira
 
@@ -118,12 +118,12 @@ usando o método `reflect.New()`:
 {% highlight go %}
 func main() {
   data_source := reflect.New(typeRegistry["GitHubDataSource"])
-  fmt.Printf("%#v", data_source) // => reflect.Value{typ:(*reflect.rtype)(0x101fc0), ptr:(unsafe.Pointer)(0x1040a120), flag:0x16}
+  fmt.Printf("%#v", data_source) // => reflect.Value
 }
 {% endhighlight %}
 
 Tendo esse pointer, eu consigo, usando o método `reflect.Value.Interface()` esse
-tipo como uma `interface{}`, que eu consigo, usando type assertion, utilizar
+tipo como uma `interface{}` que, usando type assertion, posso utilizar
 como sendo uma interface implementada pelos meus data sources:
 
 {% highlight go %}
@@ -146,7 +146,7 @@ type GitHubDataSource struct {
   DataSource
 }
 
-func (g *GitHubDataSource) Run(chan string) chan bool {
+func (g \*GitHubDataSource) Run(chan string) chan bool {
   fmt.Println("Running!")
   return make(chan bool)
 }
@@ -157,12 +157,12 @@ func init() {
 
 func main() {
   data_source := reflect.New(typeRegistry["GitHubDataSource"]).Interface().(DataSource)
-  data_source.Run(make(chan string)) # => "Running!"
+  data_source.Run(make(chan string)) // => "Running!"
 }
 {% endhighlight %}
 
 E pronto! Agora é só fazer com que cada novo `DataSource` se registre no
-_registry_ através da função init() em seu próprio arquivo. Toda a lógica do
+_registry_ através da função `init()` em seu próprio arquivo. Toda a lógica do
 `DataSource` vai poder ficar encapsulada dentro dele mesmo e criar um novo vai
 ser tão fácil quanto colocar um arquivo contendo um struct que obedeça a
 _interface_ `DataSource` dentro de uma pasta do projeto.
