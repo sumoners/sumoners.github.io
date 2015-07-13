@@ -20,6 +20,8 @@ provavelmente você está passando raiva.
 
 Pare de passar raiva, é só rodar o seguinte comando, **exatamente nessa ordem**:
 
+<!-- more -->
+
 `cat www_example_com.crt COMODORSADomainValidationSecureServerCA.crt  COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt | pbcopy`
 
 Simplesmente cole o resultado no campo "Public Key Certificate" e deixe o campo

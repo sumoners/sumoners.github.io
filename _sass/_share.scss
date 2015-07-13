@@ -1,0 +1,16 @@
+.post-share {
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  li {
+    display: inline-block;
+    margin: 5px;
+    vertical-align: bottom;
+
+    .fb-like {
+      height: 34px;
+    }
+  }
+}

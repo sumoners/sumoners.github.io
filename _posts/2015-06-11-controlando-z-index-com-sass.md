@@ -5,11 +5,13 @@ post_author: Thiago Felipe Victorino
 post_gravatar: d61374b6c66fddb2c76c2512d43ed65e
 ---
 
-Quem nunca setou `z-index: 9999;` no seu CSS que atire a primeira pedra! 
+Quem nunca setou `z-index: 9999;` no seu CSS que atire a primeira pedra!
 
 Z-index é a propriedade do CSS que define a *stacking order* no eixo Z dos elementos que vão aparecer na interface. O elemento com o maior z-index sobrepõe os menores, e por aí vai.
 
 Na falta de uma forma sã de organizar isso, não é raro setar essa propriedade de forma aleatória, na esperança que o z-index de determinado elemento "ganhe" dos outros. Por isso, é comum encontrarmos `z-index: 9999`, `z-index: 999999` por aí. Eu já fiz isso! Mas com a ajuda de um pré-processador, podemos fazer isso de forma mais organizada. :)
+
+<!-- more -->
 
 Começamos criando um arquivo separado chamado `_z-index.scss`. Nele, definimos uma lista do Sass chamada `$elements` (ou como você preferir) com o nome dos componentes que terão z-index:
 
@@ -42,7 +44,7 @@ Os parâmetros definidos são o **nome da lista** e o **nome do elemento** respe
 // ...e por aí vai
 {% endhighlight %}
 
-Assim, o *output* do CSS fica: 
+Assim, o *output* do CSS fica:
 
 {% highlight scss%}
 .navbar {
@@ -58,4 +60,3 @@ E é isso! Mudou de ideia e quer que a navbar fique posicionada acima do modal? 
 
 
 Fonte: [http://www.smashingmagazine.com/2014/06/12/sassy-z-index-management-for-complex-layouts](http://www.smashingmagazine.com/2014/06/12/sassy-z-index-management-for-complex-layouts)
-

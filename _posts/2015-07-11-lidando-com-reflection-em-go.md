@@ -17,6 +17,8 @@ conectados? Como implementar um _websocket_ que seja capaz de fazer _broadcast_
 para múltiplas conexões? Como fazer a compilação de _templates HTML_ dos
 _widgets_ no estilo "Go"? Enfim, dá pra entender aonde eu quero chegar.
 
+<!-- more -->
+
 Uma pergunta que eu não esperava ter tão cedo surgiu logo no inicio do projeto:
 "Existe metaprogramação em Go?". Isso porque eu queria fazer um dashboard
 configurável por um arquivo de configuração em JSON, que teria o seguinte

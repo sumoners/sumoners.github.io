@@ -13,6 +13,8 @@ Na SumOne, usamos em alguns projetos a versão 9.4 do Postgres, que possui o
 data type `jsonb`, que armazena dados em JSON de forma binária, permitindo
 aliar flexibilidade com velocidade.
 
+<!-- more -->
+
 Usamos também a gem [FactoryGirl](https://github.com/thoughtbot/factory_girl)
 para nos auxiliar no setup de models em nossos testes. Até então, vinhamos
 passando um trabalhão para lidar com estruturas gravadas em JSON como por
@@ -42,7 +44,7 @@ validando a estrutura do nosso campo JSON, estávamos tendo que reescrever todo
 o campo `metadata`, gerando muito ruído:
 
 {% highlight ruby %}
-feedback = create :ecommerce_feedback_new_interaction, 
+feedback = create :ecommerce_feedback_new_interaction,
                   metadata: {
                     [ ... ]
                     'affiliation' => {

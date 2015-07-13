@@ -20,6 +20,8 @@ principalmente comprometeria nossa capacidade de entregar um sistema
 performático e livre de bugs para nossos clientes, que são a peça mais
 importante de todo o sistema.
 
+<!-- more -->
+
 Por isso, optamos por utilizar uma arquitetura descentralizada, onde nossa
 _customer-facing application_ fica blindada da selva de fluxo de dados que
 trafega entre as outras aplicações, mais ou menos assim:

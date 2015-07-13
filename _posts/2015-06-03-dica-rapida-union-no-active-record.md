@@ -27,6 +27,8 @@ class Serie < ActiveRecord::Base
 end
 {% endhighlight %}
 
+<!-- more -->
+
 No meu caso eu precisava pegar todas as pessoas que tivessem cadastrado alguma coisa no sistema, independente se foi um desenho, se foi uma série ou se foi um filme, ou seja, precisava pegar todas as Pessoas que tivessem interagido com o sistema realizando algum cadastro. Montando o sql, nós fazíamos algo assim:
 
 {% highlight sql %}

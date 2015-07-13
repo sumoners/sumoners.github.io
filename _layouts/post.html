@@ -12,6 +12,10 @@ layout: default
     <img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40">
     <span class="author">{{ page.post_author }}</span>
   </div>
+
+  <div class="post-sharing">
+    {% include share.html %}
+  </div>
 </article>
 
 <aside class="related">

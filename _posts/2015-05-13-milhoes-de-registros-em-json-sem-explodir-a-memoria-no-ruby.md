@@ -16,6 +16,8 @@ JSON, que podem usar a [FedEx net](https://what-if.xkcd.com/31/), muito mais
 rápida do que a Internet :) e ser inseridos paralelamente por workers escritos
 em ruby em uma instância do Postgres levantada especialmente pra tomar porrada.
 
+<!-- more -->
+
 Eis que colocamos o sistema para rodar e logo veio uma surpresinha:
 
 ![Memória indo pro saco](https://www.dropbox.com/s/ms95dbyzco03jkq/Screenshot%202015-05-13%2017.07.45.png?raw=1)

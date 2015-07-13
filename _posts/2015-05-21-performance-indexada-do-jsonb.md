@@ -21,6 +21,8 @@ procurar uma resposta e encontrei a seguinte frase:
 > The default GIN operator class for jsonb supports queries with the @>, ?, ?&
 > and ?| operators.
 
+<!-- more -->
+
 Rapidinho corri pro console e executei a mesma query anterior, só que usando o
 operador `@>` no lugar do operador `->>` e tive uma surpresa imensamente
 agradável:

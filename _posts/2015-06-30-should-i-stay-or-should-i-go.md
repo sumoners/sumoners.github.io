@@ -32,6 +32,8 @@ interpretadas por anos, sentir novamente o "vento na cara" de usar uma linguagem
 extremamente performática. E, acredite, o código em Go é rápido, muito
 rápido, mais do que eu imaginava.
 
+<!-- more -->
+
 Empolgado com a rapidez da linguagem, pensei: _"quão rápido é esse troço?"_,
 e nada melhor do que comparar com algo que você já conhece para ter um
 parâmetro: Mãos a obra para construir um servidorzinho web básico em Ruby e

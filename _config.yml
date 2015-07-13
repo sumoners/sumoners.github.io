@@ -8,8 +8,9 @@ relative_permalinks: true
 title:               SumOne Tech Blog
 tagline:             Blog técnico da SumOne
 url:                 http://sumoners.github.io/
-paginate:            3
+paginate:            10
 baseurl:             ""
+excerpt_separator:   "<!-- more -->"
 
 # Assets
 #
@@ -28,3 +29,30 @@ author:
 version:             1.0.0
 github:
   repo:              https://github.com/sumoners/sumoners.github.io
+
+# Settings for sharing
+# Sharing is for things like tweet, plusone, hn upvotes, like, linkedin
+# Add a tweet button 		=> provider : tweet
+# Add a like button 		=> provider : like (you also need a facebook appid)
+# Add a plus one button 	=> provider : plusone
+# Add a HN button 		=> provider : hn
+# Add them all (i.e. hn + tweet + plusone + like) => provider : all
+# Set 'provider' to the sharing provider you want to use.
+# Set 'provider' to false to turn sharing off globally.
+#
+sharing:
+  provider: all
+  twitter:
+    size:
+    via: "sumonewizards"
+    count:
+  facebook:
+    appid: 910890595644391
+    layout: button_count
+    font:
+    faces: false
+    width: 50
+  googleplus:
+    size: medium
+    width: "50px"
+    annotation: bubble

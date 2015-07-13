@@ -21,6 +21,8 @@ Quão reduzidos? Bom hoje eu consegui fazer um dump de **800MB** virar um dump d
 
 ![Milagre da redução](https://www.dropbox.com/s/e0j6ud9lfuh6huh/Screenshot%202015-07-07%2017.19.37.png?raw=1)
 
+<!-- more -->
+
 O comando que estou usando para gerar o dump é o seguinte:
 
 `pg_dump -Fc --no-acl --no-owner -h HOST_DO_DB -U SEU_USUARIO DATABASE > ~/db.dump`

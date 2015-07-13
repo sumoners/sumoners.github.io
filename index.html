@@ -21,7 +21,9 @@ title: Home
       {{ post.date | date_to_string }}
     </time>
 
-    {{ post.content }}
+    {{ post.excerpt }}
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Ler Mais</a>
   </article>
   {% endfor %}
 </div>

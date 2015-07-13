@@ -9,6 +9,8 @@ No Youbiquity usamos frequentemente o tipo jsonb do PostgreSQL, em alguns moment
 
 Outra fonte de confusão, é que o session do Rails não tem esse problema, h['foo'] e h[:foo] retornam o mesmo valor. Foi aí que descobri a classe HashWithIndifferentAccess, que é usada na session do Rails.
 
+<!-- more -->
+
 O HashWithindifferentaccess usa strings como índice, independente de você usar session[:foo], internamente a chave é uma string, evitando essa confusão de symbol e string.
 
 ## pro tip

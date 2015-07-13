@@ -13,6 +13,8 @@ Ao notar que estava ocorrendo o problema devido a base compartilhada pelos Sidek
 
 A solução foi utilizar o mesmo Redis só que separando em Databases e namespaces diferentes.
 
+<!-- more -->
+
 Para isso, a implementação é simples, apenas crie um arquivo de configuração na inicialização de cada aplicação, onde serão apontadas para Databases diferentes:
 
 **Servidor 1(Tomate):** config.redis = { namespace: 'Tomate', url: 'redis://127.0.0.1:6379/0' }

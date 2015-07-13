@@ -1,0 +1,87 @@
+<div id="fb-root"></div>
+
+<ul class="post-share">
+  <!-- Hacker News -->
+  <li class="hn">
+
+    <a href="https://news.ycombinator.com/submit"
+       class="hn-button" data-title="{{ page.title }}"
+       data-count="horizontal">Vote on Hacker News</a>
+
+    <script type="text/javascript">
+      var HN = [];
+      HN.factory = function(e) {
+          return function() {
+              HN.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+          };
+      };
+      HN.on = HN.factory("on");
+      HN.once = HN.factory("once");
+      HN.off = HN.factory("off")
+      HN.emit = HN.factory("emit")
+      HN.load = function() {
+          var e = "hn-button.js";
+          if (document.getElementById(e)) return;
+          var t = document.createElement("script");
+          t.id = e, t.src = "//hn-button.herokuapp.com/hn-button.js";
+          var n = document.getElementsByTagName("script")[0];
+          n.parentNode.insertBefore(t, n)
+      }
+      HN.load();
+    </script>
+  </li>
+
+  <!-- Twitter -->
+  <li class="tw">
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-text="{{ page.title }}" data-via="{{ site.sharing.twitter.via }}"
+       data-related="{{ site.author.twitter }}"
+       data-count="{{ site.sharing.twitter.count }}"
+       data-size="{{ site.sharing.twitter.size }}">Tweet</a>
+  </li>
+
+  <!-- Facebook -->
+  <li class="fb">
+    <div class="fb-like" data-send="false"
+         data-layout="{{ site.sharing.facebook.layout }}"
+         data-width="{{ site.sharing.facebook.width }}"
+         data-show-faces="{{ site.sharing.facebook.faces }}"
+         data-font="{{ site.sharing.facebook.font }}"></div>
+  </li>
+
+  <li class="linkedin">
+    <script type="IN/Share" data-counter="right"></script>
+  </li>
+  
+  <!-- Google+ -->
+  <li class="gp">
+    <div class="g-plusone" data-size="{{ site.sharing.googleplus.size }}"
+         data-annotation="{{ site.sharing.googleplus.annotation }}"
+         data-width="{{ site.sharing.googleplus.width }}"></div>
+  </li>
+</ul>
+
+<script>
+  (function(doc, script) {
+      // Async Social Buttons
+      var js,
+          fjs = doc.getElementsByTagName(script)[0],
+          add = function(url, id) {
+              if (doc.getElementById(id)) {return;}
+              js = doc.createElement(script);
+              js.src = url;
+              id && (js.id = id);
+              fjs.parentNode.insertBefore(js, fjs);
+          };
+
+      // Twitter SDK
+      add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+
+      // Google+ button
+      add('https://apis.google.com/js/plusone.js');
+
+      // Facebook SDK
+      add('//connect.facebook.net/en_US/all.js#xfbml=1&appId={{ site.sharing.facebook.appid }}', 'facebook-jssdk');
+      add('//platform.linkedin.com/in.js');
+  }(document, 'script'));
+</script>
