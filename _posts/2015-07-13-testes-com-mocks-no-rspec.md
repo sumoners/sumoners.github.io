@@ -63,6 +63,8 @@ uma classe. Algumas vezes a classe foi criada para trabalhar em conjunto com uma
 segunda classe específica, e nestes casos não existe a possibilidade de
 substituir esta segunda classe por um mock no construtor.
 
+## Partial Test Doubles
+
 Por sorte, o RSpec nos ajuda nestes casos também, através dos [Partial test
 doubles](http://www.relishapp.com/rspec/rspec-mocks/v/3-3/docs/basics/partial-test-doubles).
 Este tipo de mock nos permite redefinir métodos de classe no namespace
