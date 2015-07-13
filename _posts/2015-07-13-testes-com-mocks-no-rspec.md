@@ -10,6 +10,8 @@ construída. Quando os testes são dificeis de manter eles acabam sendo deixados
 de lado, desatualizados, ou pior, podem ser "corrigidos" apenas para passar o
 build e testar a coisa errada dando uma falsa sensação de confiança.
 
+<!-- more -->
+
 ## Testes de Integração versus Unitários
 
 Um conceito interessante para garantir esta facilidade é a difereciação entre
@@ -117,4 +119,3 @@ Lembre-se que sempre que a assinatura de um método for alterada (o que não dev
 acontecer com frequência), você deve atualizar todos os mocks que utilizam
 aquele método, e este pode ser um trabalho árduo, dependendo de quanto aquele
 método é utilizado.
-
