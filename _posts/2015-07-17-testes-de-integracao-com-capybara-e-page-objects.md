@@ -18,6 +18,8 @@ justamente por envolverem uma porção maior da aplicação. Talvez Por este mot
 a maior parte das ferramentas que facilitam a leitura e escrita dos testes
 tenham foco neste tipo de teste.
 
+<!-- more -->
+
 O seguinte exemplo mostra um caso de teste de aceitação, utilizando o Capybara:
 
 {% highlight ruby %}
