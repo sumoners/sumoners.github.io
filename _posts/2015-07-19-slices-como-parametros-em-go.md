@@ -15,7 +15,7 @@ precisamos mais desalocar memória, saber o que está usando que espaço ou cois
 parecidas. O risco de memory leak é quase nulo, mas ainda precisamos dominar
 estes recursos para alcançarmos nossos objetivos.
 
-<!-- read ore -->
+<!-- more -->
 
 ## Um Slice é um container para um ponteiro
 
