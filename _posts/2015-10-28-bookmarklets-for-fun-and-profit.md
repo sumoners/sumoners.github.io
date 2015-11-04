@@ -12,6 +12,8 @@ Como quase toda boa ideia, tudo começa com um trabalho de corno que você não
 aguenta mais fazer. Pra quem não sabe, trabalho de corno é um trabalho
 repetitivo, sem novidades, caminhando no limite do tédio.
 
+<!-- more -->
+
 Meu trabalho de corno era o seguinte: Eu comecei a usar um aplicativo de
 controle orçamentário pessoal (isso soa mais chato do que verdadeiramente é)
 chamado apropriadamente de _You Need a Budget_.
